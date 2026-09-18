@@ -1,0 +1,16 @@
+{
+  "name": "claude-code-mastery",
+  "version": "1.0.0",
+  "description": "개발자 웹 이력서 (온라인 포트폴리오 겸용) - 반응형 정적 웹사이트",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "serve": "npx --yes serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

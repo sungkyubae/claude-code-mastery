@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#eef2ff"/>
+
+  <!-- 브라우저 창 프레임 -->
+  <rect x="30" y="30" width="340" height="180" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="30" width="340" height="28" rx="10" fill="#e0e7ff"/>
+  <circle cx="48" cy="44" r="5" fill="#f97316"/>
+  <circle cx="66" cy="44" r="5" fill="#fb923c"/>
+  <circle cx="84" cy="44" r="5" fill="#6366f1"/>
+
+  <!-- 페이지 목업: 헤더/카드 레이아웃 -->
+  <rect x="50" y="78" width="120" height="14" rx="4" fill="#6366f1"/>
+  <rect x="50" y="100" width="80" height="10" rx="3" fill="#a5b4fc"/>
+
+  <rect x="50" y="130" width="90" height="60" rx="6" fill="#c7d2fe"/>
+  <rect x="152" y="130" width="90" height="60" rx="6" fill="#a5b4fc"/>
+  <rect x="254" y="130" width="90" height="60" rx="6" fill="#818cf8"/>
+</svg>

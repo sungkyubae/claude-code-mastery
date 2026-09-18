@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#f8fafc"/>
+
+  <!-- 브라우저 창 프레임 -->
+  <rect x="30" y="30" width="340" height="180" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="30" y="30" width="340" height="28" rx="10" fill="#f1f5f9"/>
+  <circle cx="48" cy="44" r="5" fill="#f97316"/>
+  <circle cx="66" cy="44" r="5" fill="#fb923c"/>
+  <circle cx="84" cy="44" r="5" fill="#6366f1"/>
+
+  <!-- 페이지 목업: 사이드바 + 대시보드 차트 -->
+  <rect x="50" y="78" width="60" height="112" rx="6" fill="#334155"/>
+  <rect x="60" y="92" width="40" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="60" y="110" width="40" height="8" rx="2" fill="#64748b"/>
+  <rect x="60" y="128" width="40" height="8" rx="2" fill="#64748b"/>
+
+  <rect x="126" y="78" width="214" height="40" rx="6" fill="#e2e8f0"/>
+  <polyline points="140,150 170,120 200,140 230,100 260,130 290,110 320,150"
+            fill="none" stroke="#f97316" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="126" y="164" width="214" height="26" rx="6" fill="#cbd5e1"/>
+</svg>

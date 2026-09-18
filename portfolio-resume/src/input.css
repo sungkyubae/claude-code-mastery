@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* 데스크톱/모바일 내비게이션 링크 */
+  .nav-link,
+  .mobile-nav-link {
+    @apply text-secondary-600 transition hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400;
+  }
+  .nav-link-active {
+    @apply text-primary-600 dark:text-primary-400;
+  }
+
+  /* 기술 스택 뱃지 */
+  .skill-badge {
+    @apply inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-sm font-medium text-primary-700 dark:bg-primary-900 dark:text-primary-200;
+  }
+
+  /* 경력/학력 타임라인 아이템 */
+  .timeline-item {
+    @apply relative border-l-2 border-primary-200 pl-6 pb-8 last:pb-0 dark:border-primary-800;
+  }
+  .timeline-dot {
+    @apply absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-primary-500 bg-white dark:bg-secondary-900;
+  }
+
+  /* 프로젝트 카드 (썸네일 이미지가 카드 상단에 패딩 없이 꽉 차도록 overflow-hidden 사용) */
+  .project-card {
+    @apply overflow-hidden rounded-xl border border-secondary-200 bg-white shadow-sm transition hover:shadow-md dark:border-secondary-700 dark:bg-secondary-800;
+  }
+
+  /* 프로젝트 캐러셀: 가로 스크롤 트랙 + 슬라이드 폭 (모바일 1개 / 태블릿 2개 / 데스크톱 3개 노출) */
+  .projects-track {
+    @apply flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2;
+  }
+  .project-slide {
+    @apply shrink-0 snap-start basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)];
+  }
+
+  /* 캐러셀 이전/다음 화살표 버튼 */
+  .carousel-arrow {
+    @apply absolute top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-secondary-700 shadow transition hover:bg-primary-50 hover:text-primary-600 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-secondary-800/90 dark:text-secondary-200 dark:hover:bg-primary-900 dark:hover:text-primary-300;
+  }
+
+  /* 캐러셀 dot 인디케이터 */
+  .carousel-dot {
+    @apply h-2 w-2 rounded-full bg-secondary-300 transition-all dark:bg-secondary-600;
+  }
+  .carousel-dot-active {
+    @apply w-6 bg-primary-600 dark:bg-primary-400;
+  }
+
+  /* SNS 아이콘 버튼 (footer용 축약형) */
+  .social-icon-btn {
+    @apply flex h-10 w-10 items-center justify-center rounded-full bg-secondary-100 text-secondary-600 transition hover:bg-primary-100 hover:text-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500 dark:bg-secondary-800 dark:text-secondary-300 dark:hover:bg-primary-900 dark:hover:text-primary-300;
+  }
+
+  /* SNS 아이콘+라벨 링크 (contact 섹션용) */
+  .social-link {
+    @apply flex items-center gap-3 rounded-lg border border-secondary-200 px-4 py-3 text-secondary-700 transition hover:border-primary-400 hover:text-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500 dark:border-secondary-700 dark:text-secondary-200 dark:hover:border-primary-500 dark:hover:text-primary-300;
+  }
+
+  /* 스크롤 진입 애니메이션 */
+  .reveal {
+    @apply opacity-0 translate-y-4 transition duration-700 ease-out;
+  }
+  .reveal-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  /* 인쇄 시 배경/그림자 제거 (잉크 절약 및 깔끔한 출력) */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+    body {
+      background: white !important;
+    }
+    .project-card,
+    .skill-badge,
+    .social-link,
+    .social-icon-btn {
+      box-shadow: none !important;
+      background: transparent !important;
+    }
+    .carousel-arrow,
+    #projects-dots {
+      display: none !important;
+    }
+    .projects-track {
+      overflow: visible !important;
+      flex-wrap: wrap !important;
+    }
+  }
+}
